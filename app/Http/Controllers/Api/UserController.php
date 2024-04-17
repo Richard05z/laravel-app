@@ -44,7 +44,7 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:user', // email único por estudiante
             'phone' => 'required|digits:10',
-            'country' => 'required|in:Ingland,Japan,EU'
+            'country' => 'required|in:England,Japan,EU'
         ]);
 
         // Si hay un error en la validación
@@ -123,7 +123,7 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:user',
             'phone' => 'required|digits:10',
-            'country' => 'required|in:Ingland,Japan,EU'
+            'country' => 'required|in:England,Japan,EU'
         ]);
 
         if ($validator->fails()) {
@@ -169,7 +169,7 @@ class UserController extends Controller
             'name' => 'max:255',
             'email' => 'email|unique:user',
             'phone' => 'digits:10',
-            'country' => 'in:Ingland,Japan,EU'
+            'country' => 'in:England,Japan,EU'
         ]);
 
         if ($validator->fails()) {
