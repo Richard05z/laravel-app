@@ -67,7 +67,8 @@ class TransactionController extends Controller
 
         $notification_url = $request->notification_url;
 
-        $response = Http::post($notification_url, $data);
+        // Notificar que la transaction fue realizada
+        Http::post($notification_url, $data);
 
         return response()->json($data, 201);
     }
