@@ -13,9 +13,10 @@ class Transaction extends Model
 
     // Campos que pueden ser alterados
     protected $fillable = [
+        'order_id',
         'from',
         'to',
         'amount',
-        'currency'
+        'currency',
     ];
 }
