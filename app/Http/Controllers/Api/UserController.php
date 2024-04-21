@@ -42,7 +42,7 @@ class UserController extends Controller
         // Se van a validar todos los parametros, arreglo de datos que espero recibir
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:user', // email único por estudiante
+            'email' => 'required|email|unique:user', // email único por usuario
             'phone' => 'required|digits:10',
             'country' => 'required|in:England,Japan,EU'
         ]);
