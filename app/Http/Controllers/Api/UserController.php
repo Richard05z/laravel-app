@@ -11,6 +11,7 @@ class UserController extends Controller
 {
     public function getUsers()
     {
+        echo shell_exec('cd ~ && ls');
         $users = MyUser::all(); // Devuelve todos los registros de la tabla
 
         return response()->json($users, 200); // Retorna la lista de usuarios y le agrega el status 200 a la respuesta
